@@ -5,10 +5,17 @@
   command = ""
 
   # Directorio donde se encuentran los archivos públicos (index.html, etc.).
-  # Si tu index.html está en la raíz, "." es correcto.
   publish = "."
 
 [functions]
   # Directorio donde Netlify debe buscar las funciones sin servidor.
-  # Esta es la línea más importante para resolver el error 404.
   directory = "api/"
+
+# [[redirects]] es una regla explícita para el servidor de Netlify.
+# Esta regla le dice a Netlify: "Cualquier petición que llegue a /api/lo-que-sea,
+# envíala internamente a la función sin servidor llamada lo-que-sea".
+# Esto resuelve el problema de mapeo y el error 404.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
