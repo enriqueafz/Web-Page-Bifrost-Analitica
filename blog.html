@@ -25,26 +25,41 @@
     <div id="particles-js"></div>
 
     <div class="relative z-10">
+        <!-- Header / Navegación (MODIFICADO PARA SER RESPONSIVE) -->
         <header class="w-full max-w-7xl mx-auto flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8 sticky top-4 z-50">
-            <div class="flex items-center space-x-4">
-                <div class="bg-white rounded-lg shadow-md h-20 w-20 overflow-hidden">
+            <!-- Logo y Nombre -->
+            <div class="flex items-center space-x-4 z-20">
+                <div class="bg-white rounded-lg shadow-md h-16 w-16 md:h-20 md:w-20 overflow-hidden">
                     <img src="assets/images/logo.png" alt="Bifrost Analitica Logo" class="w-full h-full object-cover scale-150">
                 </div>
                 <a href="index.html" class="text-xl font-bold text-white">Bifrost Analitica</a>
             </div>
+
+            <!-- Navegación para Escritorio (la que ya tenías) -->
             <nav class="hidden md:flex relative items-center space-x-2 glass-card p-2 rounded-full">
                 <div class="nav-highlighter"></div>
                 <a href="index.html#home" class="nav-link px-4 py-1.5 text-sm">Inicio</a>
-                <a href="#services" class="nav-link px-4 py-1.5 text-sm">Servicios</a>
-                <a href="#why-us" class="nav-link px-4 py-1.5 text-sm">Nuestra Diferencia</a>
-                <a href="#how-it-works" class="nav-link px-4 py-1.5 text-sm">Proceso</a>
-                <a href="blog.html" class="nav-link active px-4 py-1.5 text-sm">Blog</a>
+                <a href="index.html#services" class="nav-link px-4 py-1.5 text-sm">Servicios</a>
+                <a href="index.html#why-us" class="nav-link px-4 py-1.5 text-sm">Nuestra Diferencia</a>
+                <a href="index.html#how-it-works" class="nav-link px-4 py-1.5 text-sm">Proceso</a>
+                <a href="blog.html" class="nav-link px-4 py-1.5 text-sm">Blog</a>
                 <a href="index.html#our-promise" class="nav-link px-4 py-1.5 text-sm">Nuestra Promesa</a>
                 <a href="about.html" class="nav-link px-4 py-1.5 text-sm">Sobre Nosotros</a>
             </nav>
-            <a href="index.html#contact" class="hidden sm:block px-5 py-2 text-sm font-semibold text-white cta-button-gradient rounded-full hover:opacity-90 transition-opacity">
+
+            <!-- Botón de Contactar (visible en escritorio) -->
+            <a href="index.html#contact" class="hidden md:flex px-5 py-2 text-sm font-semibold text-white cta-button-gradient rounded-full hover:opacity-90 transition-opacity">
                 Contactar
             </a>
+
+            <!-- Botón de Menú Móvil (Hamburguesa) - NUEVO -->
+            <div class="md:hidden flex items-center z-20">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
         </header>
 
         <main class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
@@ -100,7 +115,22 @@
             <p class="text-gray-400">&copy; 2025 Bifrost Analitica. Todos los derechos reservados.</p>
         </footer>
     </div>
-    
+
+    <!-- FONDO PARA EL MENÚ MÓVIL (NUEVO) -->
+    <div id="menu-backdrop" class="menu-backdrop-hidden"></div>
+
+    <!-- Menú Móvil Desplegable (Oculto por defecto) - NUEVO -->
+    <div id="mobile-menu" class="mobile-menu-hidden md:hidden">
+        <a href="index.html#home" class="mobile-nav-link">Inicio</a>
+        <a href="index.html#services" class="mobile-nav-link">Servicios</a>
+        <a href="index.html#why-us" class="mobile-nav-link">Nuestra Diferencia</a>
+        <a href="index.html#how-it-works" class="mobile-nav-link">Proceso</a>
+        <a href="blog.html" class="mobile-nav-link">Blog</a>
+        <a href="index.html#our-promise" class="mobile-nav-link">Nuestra Promesa</a>
+        <a href="about.html" class="mobile-nav-link">Sobre Nosotros</a>
+        <a href="index.html#contact" class="mobile-nav-link cta-button-gradient mt-2">Contactar</a>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="assets/js/main.js" defer></script>
 </body>

@@ -1,7 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- SCRIPT PARA EL MENÚ MÓVIL (VERSIÓN CORREGIDA) ---
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuBackdrop = document.getElementById('menu-backdrop');
+    const body = document.body;
+
+    if (mobileMenuButton && mobileMenu && menuBackdrop) {
+        const toggleMenu = (event) => {
+            if (event) event.stopPropagation();
+            const isOpen = mobileMenu.classList.toggle('mobile-menu-open');
+            menuBackdrop.classList.toggle('menu-backdrop-visible', isOpen);
+            body.classList.toggle('body-no-scroll', isOpen);
+        };
+
+        // Lógica para abrir/cerrar el menú con el botón
+        mobileMenuButton.addEventListener('click', toggleMenu);
+
+        // Lógica para cerrar el menú si se hace clic en un enlace dentro de él
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('mobile-menu-open')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Lógica para cerrar el menú si se hace clic en el fondo oscuro
+        menuBackdrop.addEventListener('click', toggleMenu);
+    }
 
     // --- Script de Navegación (Sin cambios) ---
-    const nav = document.querySelector('nav');
+    const nav = document.querySelector('nav.hidden.md\\:flex');
     if (nav) {
         const highlighter = nav.querySelector('.nav-highlighter');
         const navLinks = nav.querySelectorAll('a.nav-link');
