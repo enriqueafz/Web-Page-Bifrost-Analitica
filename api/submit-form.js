@@ -4,10 +4,10 @@
 export default async function handler(request, response) {
     // 1. Solo permitimos que se nos contacte con el método POST.
     if (request.method !== 'POST') {
-        return {
-            statusCode: 405,
-            body: JSON.stringify({ message: 'Método no permitido' })
-        };
+        return new Response(JSON.stringify({ message: 'Método no permitido' }), {
+            status: 405,
+            headers: { 'Content-Type': 'application/json' }
+        });
     }
 
     try {
@@ -15,16 +15,15 @@ export default async function handler(request, response) {
         const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
 
         if (!accessKey) {
-            return {
-                statusCode: 500,
-                body: JSON.stringify({ message: 'Error de configuración del servidor: La llave de API no está definida.' })
-            };
+            return new Response(JSON.stringify({ message: 'Error de configuración del servidor: La llave de API no está definida.' }), {
+                status: 500,
+                headers: { 'Content-Type': 'application/json' }
+            });
         }
         
         // 3. ¡CORRECCIÓN CLAVE!
-        // El `request.body` en Netlify es un stream. Necesitamos leerlo para obtener el JSON.
-        // Usamos JSON.parse(request.body) directamente. Netlify ya lo procesa por nosotros.
-        const requestBody = JSON.parse(request.body);
+        // Para leer el JSON que envía el fetch, usamos el método request.json().
+        const requestBody = await request.json();
 
         // 4. Creamos un nuevo objeto de formulario.
         const formData = new FormData();
@@ -49,21 +48,21 @@ export default async function handler(request, response) {
 
         // 8. Enviamos la respuesta de web3forms de vuelta a nuestra página web.
         if (data.success) {
-            return {
-                statusCode: 200,
-                body: JSON.stringify({ message: '¡Formulario enviado con éxito!' })
-            };
+            return new Response(JSON.stringify({ message: '¡Formulario enviado con éxito!' }), {
+                status: 200,
+                headers: { 'Content-Type': 'application/json' }
+            });
         } else {
-            return {
-                statusCode: 400,
-                body: JSON.stringify({ message: data.message || 'Algo salió mal.' })
-            };
+            return new Response(JSON.stringify({ message: data.message || 'Algo salió mal.' }), {
+                status: 400,
+                headers: { 'Content-Type': 'application/json' }
+            });
         }
     } catch (error) {
         console.error("Error en la función del servidor:", error);
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ message: `Error interno del servidor: ${error.message}` })
-        };
+        return new Response(JSON.stringify({ message: `Error interno del servidor: ${error.message}` }), {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' }
+        });
     }
 }
