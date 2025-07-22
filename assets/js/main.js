@@ -30,12 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
         menuBackdrop.addEventListener('click', toggleMenu);
     }
 
-    // --- Script de Navegación (Sin cambios) ---
-    const nav = document.querySelector('nav.hidden.md\\:flex');
+    // --- Script de Navegación de Escritorio (CORREGIDO) ---
+    const nav = document.querySelector('#desktop-nav');
     if (nav) {
         const highlighter = nav.querySelector('.nav-highlighter');
         const navLinks = nav.querySelectorAll('a.nav-link');
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const path = window.location.pathname;
+        const currentPage = path.split('/').pop() || 'index.html';
 
         const updateHighlighter = (activeLink) => {
             if (highlighter && activeLink) {
@@ -55,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${currentSectionId}`) {
+                // Compara solo el hash para la página de inicio
+                if (link.getAttribute('href').substring(link.getAttribute('href').indexOf('#')) === `#${currentSectionId}`) {
                     link.classList.add('active');
                 }
             });
@@ -63,21 +65,32 @@ document.addEventListener('DOMContentLoaded', () => {
             updateHighlighter(activeLink);
         };
 
+        // Lógica principal
         if (currentPage === 'index.html') {
+            // Si estamos en la página principal, activa la animación de scroll
             window.addEventListener('scroll', onScroll);
-            onScroll();
+            // Llama una vez para establecer el estado inicial
+            setTimeout(onScroll, 100); 
         } else {
-            const activeLinkOnLoad = nav.querySelector(`a[href*="${currentPage}"]`);
+            // Si estamos en otra página (about, blog, etc.)
+            let activeLinkOnLoad = null;
+            if (path.includes('/posts/')) {
+                // Si es una página de un post, activa el enlace del Blog
+                activeLinkOnLoad = nav.querySelector('a[href*="blog.html"]');
+            } else {
+                // Si no, busca el enlace que coincida con el nombre del archivo
+                activeLinkOnLoad = nav.querySelector(`a[href*="${currentPage}"]`);
+            }
+
             if (activeLinkOnLoad) {
                 activeLinkOnLoad.classList.add('active');
+                // ¡CORRECCIÓN CLAVE! Llama a updateHighlighter inmediatamente
+                // Usamos un pequeño retraso para asegurar que el DOM esté listo
+                setTimeout(() => updateHighlighter(activeLinkOnLoad), 100);
             }
         }
 
-        setTimeout(() => {
-             const linkToActivate = nav.querySelector('a.nav-link.active');
-             if(linkToActivate) updateHighlighter(linkToActivate);
-        }, 100);
-        
+        // Actualiza el resaltador si la ventana cambia de tamaño
         window.addEventListener('resize', () => {
             const activeLink = nav.querySelector('a.nav-link.active');
             if(activeLink) updateHighlighter(activeLink);
