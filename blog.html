@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self'; 
+        script-src 'self' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; 
+        style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; 
+        font-src https://fonts.gstatic.com; 
+        img-src 'self' https://placehold.co https://images.unsplash.com;
+        frame-ancestors 'none';
+        worker-src 'self' blob:;
+    ">
+    <title>Blog - Bifrost Analitica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png"> 
+</head>
+<body class="bg-[#16181D]">
+
+    <div id="particles-js"></div>
+
+    <div class="relative z-10">
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8 sticky top-4 z-50">
+            <div class="flex items-center space-x-4">
+                <div class="bg-white rounded-lg shadow-md h-20 w-20 overflow-hidden">
+                    <img src="assets/images/logo.png" alt="Bifrost Analitica Logo" class="w-full h-full object-cover scale-150">
+                </div>
+                <a href="index.html" class="text-xl font-bold text-white">Bifrost Analitica</a>
+            </div>
+            <nav class="hidden md:flex relative items-center space-x-2 glass-card p-2 rounded-full">
+                <div class="nav-highlighter"></div>
+                <a href="index.html#home" class="nav-link px-4 py-1.5 text-sm">Inicio</a>
+                <a href="#services" class="nav-link px-4 py-1.5 text-sm">Servicios</a>
+                <a href="#why-us" class="nav-link px-4 py-1.5 text-sm">Nuestra Diferencia</a>
+                <a href="#how-it-works" class="nav-link px-4 py-1.5 text-sm">Proceso</a>
+                <a href="blog.html" class="nav-link active px-4 py-1.5 text-sm">Blog</a>
+                <a href="index.html#our-promise" class="nav-link px-4 py-1.5 text-sm">Nuestra Promesa</a>
+                <a href="about.html" class="nav-link px-4 py-1.5 text-sm">Sobre Nosotros</a>
+            </nav>
+            <a href="index.html#contact" class="hidden sm:block px-5 py-2 text-sm font-semibold text-white cta-button-gradient rounded-full hover:opacity-90 transition-opacity">
+                Contactar
+            </a>
+        </header>
+
+        <main class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 sm:mb-24">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+                        Desde Nuestro Blog
+                    </h1>
+                    <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-300">
+                        Ideas, análisis y conocimiento para potenciar tu negocio con datos. Exploramos el mundo del análisis de datos para ofrecerte contenido de valor que puedas aplicar hoy.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Artículo 1 -->
+                    <a href="posts/post-kpi.html" class="blog-card-link">
+                        <div class="blog-card glass-card rounded-2xl overflow-hidden h-full flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Gráficos y KPIs" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <p class="text-sm text-cyan-400">Estrategia de Datos</p>
+                                <h3 class="mt-2 text-xl font-bold text-white flex-grow">¿Qué es un KPI y por qué mi pyme lo necesita?</h3>
+                                <p class="mt-2 text-sm text-gray-400">Descubre cómo los Indicadores Clave de Rendimiento pueden transformar la forma en que tomas decisiones y mides el éxito de tu negocio.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Artículo 2 (Placeholder) -->
+                    <a href="posts/post-error-ventas.html" class="blog-card-link">
+                        <div class="blog-card glass-card rounded-2xl overflow-hidden h-full flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800&auto=format&fit=crop" alt="Persona cometiendo un error en una pizarra" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <p class="text-sm text-cyan-400">Análisis de Datos</p>
+                                <h3 class="mt-2 text-xl font-bold text-white flex-grow">3 errores comunes al analizar datos de ventas (y cómo evitarlos)</h3>
+                                <p class="mt-2 text-sm text-gray-400">Identifica las trampas más frecuentes al interpretar tus datos de ventas y aprende a generar insights que realmente impulsen el crecimiento.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Artículo 3 (Placeholder) -->
+                    <a href="posts/post-cimiento-datos.html" class="blog-card-link">
+                        <div class="blog-card glass-card rounded-2xl overflow-hidden h-full flex flex-col">
+                            <img src="assets/images/imagen-post-3.jpg" alt="Base de datos y código" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <p class="text-sm text-cyan-400">Infraestructura</p>
+                                <h3 class="mt-2 text-xl font-bold text-white flex-grow">El Cimiento de Datos: ¿Por qué centralizar tu información es crucial?</h3>
+                                <p class="mt-2 text-sm text-gray-400">Exploramos los beneficios de tener una única fuente de verdad para tus datos y cómo esto habilita una inteligencia de negocio superior.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="w-full max-w-7xl mx-auto text-center py-8 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+            <p class="text-gray-400">&copy; 2025 Bifrost Analitica. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

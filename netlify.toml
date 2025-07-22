@@ -1,0 +1,14 @@
+# Archivo de configuración para Netlify
+
+[build]
+  # Comando de compilación (puede estar vacío para sitios estáticos).
+  command = ""
+
+  # Directorio donde se encuentran los archivos públicos (index.html, etc.).
+  # Si tu index.html está en la raíz, "." es correcto.
+  publish = "."
+
+[functions]
+  # Directorio donde Netlify debe buscar las funciones sin servidor.
+  # Esta es la línea más importante para resolver el error 404.
+  directory = "api/"

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Política de Seguridad de Contenido (CSP) CORREGIDA -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self'; 
+        script-src 'self' https://cdn.tailwindcss.com https://cdn.jsdelivr.net 'unsafe-inline'; 
+        style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; 
+        font-src https://fonts.gstatic.com; 
+        img-src 'self' https://placehold.co https://*.unsplash.com;
+        connect-src 'self';
+        form-action 'self';
+        worker-src 'self' blob:;
+    ">
+
+    <title>Bifrost Analitica - Decisiones Inteligentes Impulsadas por Datos</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="icon" type="image/png" href="assets/images/logo.png"> 
+</head>
+<body class="min-h-screen">
+
+    <!-- Contenedor para la animación de Particles.js (capa de fondo) -->
+    <div id="particles-js"></div>
+
+    <!-- Contenedor Principal del Contenido -->
+    <div class="relative z-10">
+        <!-- Header / Navegación -->
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8 sticky top-4 z-50">
+            <div class="flex items-center space-x-4">
+                <div class="bg-white rounded-lg shadow-md h-20 w-20 overflow-hidden">
+                    <img src="assets/images/logo.png" alt="Bifrost Analitica Logo" class="w-full h-full object-cover scale-150">
+                </div>
+                <a href="index.html" class="text-xl font-bold text-white">Bifrost Analitica</a>
+            </div>
+            <!-- Contenedor relativo para el resaltador -->
+            <nav class="hidden md:flex relative items-center space-x-2 glass-card p-2 rounded-full">
+                <!-- El resaltador que se moverá -->
+                <div class="nav-highlighter"></div>
+                <a href="#home" class="nav-link px-4 py-1.5 text-sm">Inicio</a>
+                <a href="#services" class="nav-link px-4 py-1.5 text-sm">Servicios</a>
+                <a href="#why-us" class="nav-link px-4 py-1.5 text-sm">Nuestra Diferencia</a>
+                <a href="#how-it-works" class="nav-link px-4 py-1.5 text-sm">Proceso</a>
+                <a href="blog.html" class="nav-link px-4 py-1.5 text-sm">Blog</a>
+                <a href="#our-promise" class="nav-link px-4 py-1.5 text-sm">Nuestra Promesa</a>
+                <a href="about.html" class="nav-link px-4 py-1.5 text-sm">Sobre Nosotros</a>
+            </nav>
+            <a href="#contact" class="hidden sm:block px-5 py-2 text-sm font-semibold text-white cta-button-gradient rounded-full hover:opacity-90 transition-opacity">
+                Contactar
+            </a>
+        </header>
+
+        <!-- Sección Hero -->
+        <main id="home" class="relative min-h-screen flex items-center justify-center text-center p-4">
+            <!-- Contenido de la Sección Hero (capa superior) -->
+            <div class="relative z-20">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
+                    Decisiones Inteligentes <br class="hidden sm:block" /> Impulsadas por Datos
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-300">
+                    En Bifrost Analitica, conectamos sus datos con el futuro de su negocio a través del análisis avanzado, la ciencia de datos y estrategias financieras.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#services" class="px-6 py-3 font-semibold text-white border-2 border-gray-500 rounded-full hover:bg-white/10 transition-all">Nuestros Servicios</a>
+                    <a href="#contact" class="px-6 py-3 font-semibold text-white cta-button-gradient rounded-full hover:opacity-90 transition-opacity">
+                        Solicitar Consulta
+                    </a>
+                </div>
+            </div>
+
+            <!-- Capa de Tarjetas Flotantes Decorativas (capa intermedia) -->
+            <div class="hidden md:block absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-10">
+                <div class="absolute top-[15%] left-[2%] lg:left-[5%] xl:left-[10%] w-64 animate-float-1"><div class="glass-card p-4 rounded-2xl"><p class="text-sm text-gray-400">Optimización de Ingresos</p><div class="flex items-baseline mt-2"><p class="text-3xl font-bold text-white">+28%</p><p class="text-xs text-green-400 ml-2">Crecimiento</p></div><div class="w-full bg-gray-700 rounded-full h-2 mt-3"><div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full" style="width: 78%"></div></div></div></div>
+                <div class="absolute top-[15%] right-[2%] lg:right-[5%] xl:right-[10%] w-52 animate-float-2"><div class="glass-card p-4 rounded-2xl"><p class="text-sm text-gray-400">Segmentación de Clientes</p><div class="h-16 mt-2 flex items-end space-x-1.5"><div class="w-1/4 h-[40%] bg-sky-500/50 rounded-t-sm"></div><div class="w-1/4 h-[70%] bg-sky-500/50 rounded-t-sm"></div><div class="w-1/4 h-[30%] bg-sky-500/50 rounded-t-sm"></div><div class="w-1/4 h-[90%] bg-sky-500/50 rounded-t-sm"></div><div class="w-1/4 h-[60%] bg-sky-500/50 rounded-t-sm"></div></div></div></div>
+                <div class="absolute bottom-[15%] left-[5%] lg:left-[8%] xl:left-[12%] w-72 animate-float-3"><div class="glass-card p-4 rounded-2xl"><div class="flex justify-between items-center"><div><p class="text-sm text-gray-400">Reducción de Costos Operativos</p><p class="text-xl font-bold text-white">-18% en logística</p></div><div class="w-10 h-10 bg-green-500/20 text-green-300 flex items-center justify-center rounded-full"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div></div></div></div>
+                <div class="absolute bottom-[15%] right-[5%] lg:right-[8%] xl:right-[12%] w-60 animate-float-4"><div class="glass-card p-4 rounded-2xl"><p class="text-sm text-gray-400">Precisión del Modelo</p><div class="flex items-baseline mt-2"><p class="text-3xl font-bold text-white">97.4%</p></div><svg width="100%" height="40" viewBox="0 0 100 40" class="mt-2"><polyline fill="none" stroke="rgba(0, 169, 224, 0.8)" stroke-width="2" points="0,30 20,20 40,25 60,10 80,18 100,10" /></svg></div></div>
+            </div>
+        </main>
+
+        <section id="services" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold">Puentes hacia la Claridad y el Crecimiento</h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-gray-300">Ofrecemos soluciones integrales que transforman la complejidad en oportunidad.</p>
+                </div>
+                <div class="space-y-16">
+                    <!-- Servicio 1 -->
+                    <div class="service-card-redesigned animate-on-scroll">
+                        <div class="service-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <div class="service-text-wrapper">
+                            <h3 class="text-2xl font-bold mb-3">Dashboard Estratégico 360</h3>
+                            <p class="text-gray-300">Convertimos tus datos en un centro de mando interactivo. Obtén una visión 360° de tu negocio en tiempo real para tomar decisiones rápidas, informadas y seguras.</p>
+                        </div>
+                    </div>
+                    <!-- Servicio 2 -->
+                    <div class="service-card-redesigned animate-on-scroll md:flex-row-reverse">
+                        <div class="service-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7m0 0c0 2.21-3.582 4-8 4s-8-1.79-8-4m16 0c0-2.21-3.582-4-8-4S4 4.79 4 7m16 0L8 1" />
+                            </svg>
+                        </div>
+                        <div class="service-text-wrapper">
+                            <h3 class="text-2xl font-bold mb-3">El Cimiento de Datos</h3>
+                            <p class="text-gray-300">Construimos la columna vertebral digital de tu empresa. Centralizamos y organizamos tu información para crear un activo de datos sólido, seguro y listo para el futuro.</p>
+                        </div>
+                    </div>
+                    <!-- Servicio 3 -->
+                    <div class="service-card-redesigned animate-on-scroll">
+                        <div class="service-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <div class="service-text-wrapper">
+                            <h3 class="text-2xl font-bold mb-3">Hoja de Ruta de Datos</h3>
+                            <p class="text-gray-300">Te entregamos el mapa del tesoro escondido en tus datos. Analizamos tu información actual para revelarte oportunidades, reducir costos y darte un plan de acción claro desde el día uno.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Nuestra Diferencia -->
+        <section id="why-us" class="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Nuestra Diferencia: Más Allá de los Datos</h2>
+                <p class="max-w-3xl mx-auto text-gray-300 mb-12">No solo entregamos reportes, construimos capacidades. Entendemos los desafíos únicos de las empresas en crecimiento y nos convertimos en tu socio estratégico.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <!-- Card 1: Socios Estratégicos -->
+                    <div class="glass-card p-8 rounded-2xl border border-transparent hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll" data-delay="0">
+                        <div class="icon-container mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Socios Estratégicos</h3>
+                        <p class="text-gray-300">Nos integramos a tu equipo. En lugar de ser un proveedor externo, trabajamos codo a codo contigo para entender tus metas y alinear cada análisis con tus objetivos de negocio.</p>
+                    </div>
+                    <!-- Card 2: Claridad, no Complejidad -->
+                    <div class="glass-card p-8 rounded-2xl border border-transparent hover:border-cyan-500/50 transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll" data-delay="200">
+                        <div class="icon-container mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Claridad, no Complejidad</h3>
+                        <p class="text-gray-300">Traducimos la complejidad de los datos en insights claros y directos. Te entregamos respuestas y recomendaciones que puedes implementar de inmediato, sin jerga técnica innecesaria.</p>
+                    </div>
+                    <!-- Card 3: Construcción de Capacidades -->
+                    <div class="glass-card p-8 rounded-2xl border border-transparent hover:border-sky-500/50 transition-all duration-300 transform hover:-translate-y-2 animate-on-scroll" data-delay="400">
+                        <div class="icon-container mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Construcción de Capacidades</h3>
+                        <p class="text-gray-300">Nuestro objetivo es que no nos necesites para siempre. Te enseñamos a entender y usar tus datos, fomentando una cultura de decisiones informadas que perdure y escale con tu empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold">Nuestro Proceso Simplificado</h2>
+                </div>
+                <div class="space-y-16">
+                    <!-- Step 1 -->
+                    <div class="process-step-card animate-on-scroll">
+                        <div class="process-image-wrapper">
+                            <img src="https://placehold.co/600x400/1E293B/38BDF8?text=Conexión" alt="Conexión de Datos" class="rounded-lg shadow-lg">
+                        </div>
+                        <div class="process-text-wrapper">
+                            <span class="process-step-number">01</span>
+                            <h3 class="text-2xl font-bold mb-3">Conectar y Unificar</h3>
+                            <p class="text-gray-300">El primer paso es construir tu Cimiento de Datos. Nos conectamos de forma segura a todas tus fuentes de información (ventas, marketing, operaciones) y las centralizamos en un único lugar. Convertimos el caos de datos dispersos en un activo organizado y listo para ser analizado.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="process-step-card animate-on-scroll md:flex-row-reverse">
+                        <div class="process-image-wrapper">
+                             <img src="https://placehold.co/600x400/1E293B/38BDF8?text=Análisis" alt="Análisis y Visualización" class="rounded-lg shadow-lg">
+                        </div>
+                        <div class="process-text-wrapper">
+                            <span class="process-step-number">02</span>
+                            <h3 class="text-2xl font-bold mb-3">Analizar y Visualizar</h3>
+                            <p class="text-gray-300">Aquí es donde la magia ocurre. Aplicamos análisis avanzados para descubrir patrones, tendencias y oportunidades ocultas. Transformamos estos hallazgos en Dashboards Estratégicos 360°, visualizaciones claras e interactivas que te permiten entender el rendimiento de tu negocio de un vistazo.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="process-step-card animate-on-scroll">
+                        <div class="process-image-wrapper">
+                             <img src="https://placehold.co/600x400/1E293B/38BDF8?text=Crecimiento" alt="Crecimiento y Estrategia" class="rounded-lg shadow-lg">
+                        </div>
+                        <div class="process-text-wrapper">
+                            <span class="process-step-number">03</span>
+                            <h3 class="text-2xl font-bold mb-3">Actuar y Crecer</h3>
+                            <p class="text-gray-300">Los datos solo son útiles si conducen a la acción. Te entregamos una Hoja de Ruta de Datos con recomendaciones claras y accionables. Te ayudamos a implementar estrategias basadas en evidencia para optimizar procesos, aumentar la rentabilidad e impulsar un crecimiento sostenible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del Blog -->
+        <section id="blog" class="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Desde Nuestro Blog</h2>
+                <p class="max-w-3xl mx-auto text-gray-300 mb-12">Compartimos nuestro conocimiento para ayudarte a navegar el mundo de los datos.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Artículo 1 -->
+                    <a href="posts/post-kpi.html" class="blog-card-link">
+                        <div class="blog-card glass-card rounded-2xl overflow-hidden h-full flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Gráficos y KPIs" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <p class="text-sm text-cyan-400">Estrategia de Datos</p>
+                                <h3 class="mt-2 text-xl font-bold text-white flex-grow">¿Qué es un KPI y por qué mi pyme lo necesita?</h3>
+                                <p class="mt-2 text-sm text-gray-400">Descubre cómo los Indicadores Clave de Rendimiento pueden transformar la forma en que tomas decisiones.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Artículo 2 (Placeholder) -->
+                    <a href="posts/post-error-ventas.html" class="blog-card-link">
+                        <div class="blog-card glass-card rounded-2xl overflow-hidden h-full flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800&auto=format&fit=crop" alt="Persona cometiendo un error en una pizarra" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <p class="text-sm text-cyan-400">Análisis de Datos</p>
+                                <h3 class="mt-2 text-xl font-bold text-white flex-grow">3 errores comunes al analizar datos de ventas</h3>
+                                <p class="mt-2 text-sm text-gray-400">Identifica las trampas más frecuentes al interpretar tus datos de ventas y aprende a generar insights valiosos.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Artículo 3 (Placeholder) -->
+                    <a href="posts/post-cimiento-datos.html" class="blog-card-link">
+                        <div class="blog-card glass-card rounded-2xl overflow-hidden h-full flex flex-col">
+                            <img src="assets/images/imagen-post-3.jpg" alt="Base de datos y código" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <p class="text-sm text-cyan-400">Infraestructura</p>
+                                <h3 class="mt-2 text-xl font-bold text-white flex-grow">El Cimiento de Datos: ¿Por qué centralizar tu información?</h3>
+                                <p class="mt-2 text-sm text-gray-400">Exploramos los beneficios de tener una única fuente de verdad para tus datos y cómo esto habilita una inteligencia de negocio superior.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-promise" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Nuestra Promesa</h2>
+                <p class="max-w-3xl mx-auto text-gray-300 mb-12">Tu éxito es nuestro éxito. Nos comprometemos a ser más que un proveedor; seremos tu socio en el camino hacia la madurez de los datos.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <!-- Promesa 1: Transparencia Total -->
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="icon-container mb-6">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Transparencia Total</h3>
+                        <p class="text-gray-300">Comunicación clara y constante. Siempre sabrás en qué estamos trabajando, por qué lo hacemos y cómo impacta directamente en tus objetivos de negocio. Sin jerga, solo claridad.</p>
+                    </div>
+                    <!-- Promesa 2: Enfoque en Resultados -->
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="icon-container mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Enfoque en Resultados</h3>
+                        <p class="text-gray-300">No nos perdemos en la complejidad de los datos. Cada análisis, dashboard e insight que entregamos está directamente vinculado a un resultado medible: aumentar ingresos, reducir costos o mejorar la eficiencia.</p>
+                    </div>
+                    <!-- Promesa 3: Asociación a Largo Plazo -->
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="icon-container mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Asociación a Largo Plazo</h3>
+                        <p class="text-gray-300">Nuestro objetivo es empoderarte. Te ayudamos a construir una cultura de datos interna, dándote las herramientas y el conocimiento para que, con el tiempo, la inteligencia de datos sea una capacidad propia de tu equipo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center glass-card p-8 sm:p-12 rounded-2xl relative overflow-hidden">
+                <!-- Contenedor de Notificación -->
+                <div id="form-notification" class="absolute inset-0 bg-gray-800 bg-opacity-75 backdrop-blur-sm flex items-center justify-center rounded-2xl z-20 opacity-0 pointer-events-none transition-opacity duration-300">
+                    <div class="notification-content text-center p-8">
+                        <div id="notification-icon" class="mx-auto mb-4"></div>
+                        <h3 id="notification-title" class="text-2xl font-bold mb-2"></h3>
+                        <p id="notification-message"></p>
+                    </div>
+                </div>
+                <!-- Contenido del Formulario -->
+                <div id="form-content">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">¿Listo para Transformar sus Datos?</h2>
+                    <p class="max-w-2xl mx-auto text-gray-300 mb-8">Hablemos sobre cómo Bifrost Analitica puede ayudarle. Nuestra primera consulta es gratuita.</p>
+                    <form id="contact-form" class="mt-6 max-w-xl mx-auto text-left">
+                        <!-- Se han eliminado la 'action' y los campos ocultos inseguros -->
+                        
+                        <!-- Campo Honeypot para anti-spam (esto está bien) -->
+                        <input type="checkbox" name="botcheck" id="botcheck" style="display: none;">
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nombre Completo</label>
+                                <input type="text" name="name" id="name" required class="form-input">
+                            </div>
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Nombre de la Empresa</label>
+                                <input type="text" name="company" id="company" required class="form-input">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Correo Electrónico</label>
+                                <input type="email" name="email" id="email" required class="form-input">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Teléfono (Opcional)</label>
+                                <input type="tel" name="phone" id="phone" class="form-input">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">¿Cómo podemos ayudarte?</label>
+                            <textarea name="message" id="message" rows="4" required class="form-input"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="w-full sm:w-auto px-8 py-3 font-semibold text-white cta-button-gradient rounded-full hover:opacity-90 transition-opacity">
+                                Enviar Solicitud
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="w-full max-w-7xl mx-auto text-center py-8 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+            <p class="text-gray-400">&copy; 2025 Bifrost Analitica. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- CDN de Librerías -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Script principal del sitio -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

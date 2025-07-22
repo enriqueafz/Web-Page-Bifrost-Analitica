@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Política de Seguridad de Contenido (CSP) -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self'; 
+        script-src 'self' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; 
+        style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; 
+        font-src https://fonts.gstatic.com; 
+        img-src 'self' https://placehold.co https://images.unsplash.com;
+        frame-ancestors 'none';
+        worker-src 'self' blob:;
+    ">
+
+    <title>Sobre Nosotros - Bifrost Analitica</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="icon" type="image/png" href="assets/images/logo.png"> 
+</head>
+<body class="bg-[#16181D]">
+
+    <!-- Contenedor Principal del Contenido -->
+    <div class="relative z-10">
+        <!-- Header / Navegación -->
+        <header class="w-full max-w-7xl mx-auto flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8 sticky top-4 z-50">
+            <div class="flex items-center space-x-4">
+                <div class="bg-white rounded-lg shadow-md h-20 w-20 overflow-hidden">
+                    <img src="assets/images/logo.png" alt="Bifrost Analitica Logo" class="w-full h-full object-cover scale-150">
+                </div>
+                <a href="index.html" class="text-xl font-bold text-white">Bifrost Analitica</a>
+            </div>
+            <!-- Contenedor relativo para el resaltador -->
+            <nav class="hidden md:flex relative items-center space-x-2 glass-card p-2 rounded-full">
+                <!-- El resaltador que se moverá -->
+                <div class="nav-highlighter"></div>
+                <a href="index.html#home" class="nav-link px-4 py-1.5 text-sm">Inicio</a>
+                <a href="index.html#services" class="nav-link px-4 py-1.5 text-sm">Servicios</a>
+                <a href="index.html#why-us" class="nav-link px-4 py-1.5 text-sm">Nuestra Diferencia</a>
+                <a href="index.html#how-it-works" class="nav-link px-4 py-1.5 text-sm">Proceso</a>
+                <a href="blog.html" class="nav-link px-4 py-1.5 text-sm">Blog</a>
+                <a href="index.html#our-promise" class="nav-link px-4 py-1.5 text-sm">Nuestra Promesa</a>
+                <a href="about.html" class="nav-link active px-4 py-1.5 text-sm">Sobre Nosotros</a>
+            </nav>
+            <a href="index.html#contact" class="hidden sm:block px-5 py-2 text-sm font-semibold text-white cta-button-gradient rounded-full hover:opacity-90 transition-opacity">
+                Contactar
+            </a>
+        </header>
+
+        <!-- Contenido Principal de "Sobre Nosotros" -->
+        <main class="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <div id="particles-js"></div>
+            <div class="relative z-10 max-w-7xl mx-auto">
+
+                <!-- Sección Hero de la página -->
+                <div class="text-center mb-16 sm:mb-24">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+                        Conectamos sus datos con el futuro de su negocio.
+                    </h1>
+                    <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-300">
+                        Somos un equipo de innovadores, estrategas y expertos en datos dedicados a desbloquear el potencial oculto en la información para impulsar el crecimiento y la eficiencia de nuestros clientes.
+                    </p>
+                </div>
+
+                <!-- Sección Nuestra Historia -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+                    <div>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Nuestra Historia</h2>
+                        <p class="text-gray-300 mb-4">
+                            Fundada en 2025, Bifrost Analitica nació de la visión de que las decisiones empresariales más impactantes se toman cuando la intuición se encuentra con los datos. Desde nuestros inicios, nos hemos especializado en tender puentes entre la complejidad de los datos brutos y la claridad de los insights accionables.
+                        </p>
+                        <p class="text-gray-300">
+                            Nos hemos consolidado como expertos en análisis avanzado, ciencia de datos y finanzas cuantitativas, manteniendo siempre un compromiso inquebrantable con la entrega de resultados tangibles y una ventaja competitiva sostenible para nuestros socios.
+                        </p>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?q=80&w=2070&auto=format&fit=crop" alt="Equipo de Bifrost Analitica colaborando" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Sección Misión y Visión -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+                    <div class="glass-card p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold text-white mb-3">Nuestra Misión</h3>
+                        <p class="text-gray-300">Empoderamos a las pequeñas empresas para que dominen sus datos. Construimos junto a ellas la infraestructura para capturar y centralizar su información, y la transformamos en crecimiento a través de análisis claros y dashboards estratégicos.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold text-white mb-3">Nuestra Visión</h3>
+                        <p class="text-gray-300">Crear un ecosistema empresarial en Venezuela donde la inteligencia de datos no sea un privilegio, sino una capacidad fundamental construida desde adentro. Aspiramos a ser el catalizador que inicia y madura la cultura de datos en cada uno de nuestros socios.</p>
+                    </div>
+                </div>
+
+                <!-- Sección de Valores -->
+                <div class="text-center mb-24">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12">Nuestros Valores Fundamentales</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Valor 1: Innovación -->
+                        <div class="value-card flex flex-col items-center text-center p-8 rounded-2xl bg-blue-950/20 hover:bg-blue-900/30 hover:-translate-y-2 animate-pulse-blue" style="animation-delay: 0s;">
+                            <div class="icon-container mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+                            <h4 class="text-xl font-semibold mb-2 text-white">Innovación</h4>
+                            <p class="text-gray-400">Buscamos constantemente nuevas y mejores formas de resolver los desafíos.</p>
+                        </div>
+                        <!-- Valor 2: Integridad -->
+                        <div class="value-card flex flex-col items-center text-center p-8 rounded-2xl bg-cyan-950/20 hover:bg-cyan-900/30 hover:-translate-y-2 animate-pulse-cyan" style="animation-delay: 0.3s;">
+                            <div class="icon-container mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                            <h4 class="text-xl font-semibold mb-2 text-white">Integridad</h4>
+                            <p class="text-gray-400">Actuamos con honestidad y transparencia en todas nuestras interacciones.</p>
+                        </div>
+                        <!-- Valor 3: Colaboración -->
+                        <div class="value-card flex flex-col items-center text-center p-8 rounded-2xl bg-sky-950/20 hover:bg-sky-900/30 hover:-translate-y-2 animate-pulse-sky" style="animation-delay: 0.6s;">
+                            <div class="icon-container mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21a6 6 0 00-9-5.197M15 21a6 6 0 006-5.197M3 21a6 6 0 016-5.197"/></svg></div>
+                            <h4 class="text-xl font-semibold mb-2 text-white">Colaboración</h4>
+                            <p class="text-gray-400">Trabajamos como un socio estratégico junto a nuestros clientes.</p>
+                        </div>
+                        <!-- Valor 4: Excelencia -->
+                        <div class="value-card flex flex-col items-center text-center p-8 rounded-2xl bg-indigo-950/20 hover:bg-indigo-900/30 hover:-translate-y-2 animate-pulse-indigo" style="animation-delay: 0.9s;">
+                            <div class="icon-container mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-12v4m-2-2h4m5 4v4m-2-2h4M17 3h4M19 5v4M17 17h4m-2 2v-4" /></svg></div>
+                            <h4 class="text-xl font-semibold mb-2 text-white">Excelencia</h4>
+                            <p class="text-gray-400">Nos esforzamos por la más alta calidad y resultados impactantes.</p>
+                        </div>
+                     </div>
+                </div>
+
+                <!-- Sección Conoce al Equipo -->
+                <div class="text-center">
+                     <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12">Los Fundadores</h2>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 max-w-4xl mx-auto">
+                        <!-- Miembro del equipo 1 -->
+                        <div class="text-center">
+                            <img class="mx-auto h-48 w-48 rounded-full object-cover object-[50%_25%] mb-4 shadow-lg" src="assets/images/profile-image-enrique.png" alt="Foto de perfil">
+                            <h4 class="text-2xl font-bold text-white">Enrique Franquiz</h4>
+                            <p class="text-cyan-400 text-lg">Fundador y Arquitecto de Datos</p>
+                            <p class="text-gray-300 mt-2 max-w-xs mx-auto">
+                                <i>"Apasionado por la tecnología y especialista en construir la infraestructura de datos que impulsa el futuro. Diseño y despliego los cimientos técnicos robustos y escalables sobre los que nuestros clientes construyen su éxito."</i>
+                            </p>
+                            <div class="mt-4 flex justify-center">
+                                <!-- CORRECCIÓN: Se ha añadido el enlace correcto aquí -->
+                                <a href="https://www.linkedin.com/in/enrique-franquiz-7126651a1/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                                    <span class="sr-only">LinkedIn</span>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Miembro del equipo 2 -->
+                        <div class="text-center">
+                            <img class="mx-auto h-48 w-48 rounded-full object-cover object-top mb-4 shadow-lg" src="assets/images/profile-image-javier.png" alt="Foto de perfil">
+                            <h4 class="text-2xl font-bold text-white">Javier Bethencourt</h4>
+                            <p class="text-cyan-400 text-lg">Co-Fundador y Estratega de Datos</p>
+                             <p class="text-gray-300 mt-2 max-w-xs mx-auto">
+                                <i>"Mi pasión es transformar datos en valor. Ayudo a nuestros clientes a descubrir las oportunidades ocultas en su información para que tomen decisiones más inteligentes e impulsen el crecimiento de su negocio."</i>
+                            </p>
+                            <div class="mt-4 flex justify-center">
+                                <a href="https://www.linkedin.com/in/javier-alejandro-bethencourt-brice%C3%B1o-262a02268/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                                    <span class="sr-only">LinkedIn</span>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="w-full max-w-7xl mx-auto text-center py-8 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+            <p class="text-gray-400">&copy; 2025 Bifrost Analitica. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    
+    <!-- CDN de Librerías -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Script principal del sitio -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
